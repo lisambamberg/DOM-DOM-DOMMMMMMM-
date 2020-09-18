@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnText = document.createTextNode("Add Square");
     btn.appendChild(btnText);
     document.body.appendChild(btn);
-    let divId = 0;
+    let divId = 1;
+    const colorArray = ["red", "orange", "yellow", "green", "blue", "purple"];
 
     let squareContainer = document.createElement("div");
     squareContainer.className = "container";
@@ -26,5 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
         div.addEventListener("mouseout", function () {
             valueSquareId.style.display = "none";
         });
+
+        div.addEventListener("click", function () {
+            const randomNum = Math.floor((Math.random() * colorArray.length));
+            div.style.backgroundColor = colorArray[randomNum];
+        })
     });
 });
