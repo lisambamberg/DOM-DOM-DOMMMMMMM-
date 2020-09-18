@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let btn = document.createElement("button");
-    let btnText = document.createTextNode("Add Square");
+    const btn = document.createElement("button");
+    const btnText = document.createTextNode("Add Square");
     btn.appendChild(btnText);
     document.body.appendChild(btn);
     let divId = 1;
@@ -31,6 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
         div.addEventListener("click", function () {
             const randomNum = Math.floor((Math.random() * colorArray.length));
             div.style.backgroundColor = colorArray[randomNum];
-        })
+        });
+
+        div.addEventListener("dblclick", function () {
+            if (divId % 2 == 0) {
+                if (div.nextElementSibling) {
+                    div.nextElementSibling.remove();
+                } else {
+                    window.alert("No square after the clicked square!");
+                }
+            } else if (divId % 2 == 1) {
+                if (div.previousElementSibling) {
+                    div.previousElementSibling.remove();
+                } else {
+                    window.alert("No square before the clicked square!");
+                }
+            }
+        });
     });
 });
