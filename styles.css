@@ -1,7 +1,19 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .newDiv {
     width: 100px;
     height: 100px;
+    margin: 1em;
     background-color: black;
-    display: inline-flex;  
-    flex-wrap: wrap;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.divId {
+    color: white;
+    display: none;
 }
