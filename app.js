@@ -9,4 +9,5 @@ btn.addEventListener("click", function () {
     div.className = "newDiv";
     document.body.appendChild(div);
     divId++;
+    div.appendChild(document.createTextNode(divId));
 })
