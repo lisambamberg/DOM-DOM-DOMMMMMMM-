@@ -8,12 +8,17 @@
     height: 100px;
     margin: 5px;
     background-color: black;
-    display: flex; 
     justify-content: center;
     align-items: center;
+    display: flex;
+
 }
 
 .divId {
-    color: white;
     display: none;
+}
+
+.newDiv:hover > .divId {
+    color: white;
+    display: block;
 }

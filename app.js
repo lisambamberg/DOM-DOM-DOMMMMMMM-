@@ -19,13 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         div.appendChild(valueSquareId);
         divId++;
 
-        div.addEventListener("mouseover", function () {
-            valueSquareId.style.display = "inline";
-        });
-
-        div.addEventListener("mouseout", function () {
-            valueSquareId.style.display = "none";
-        });
+        squareContainer.appendChild(div);
 
         div.addEventListener("click", function () {
             div.style.backgroundColor = getRandomColor();
