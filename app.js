@@ -31,15 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
             div.style.backgroundColor = getRandomColor();
         })
 
-        function getRandomColor() {
-            let letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
         div.addEventListener("dblclick", function () {
             if (divId % 2 == 0) {
                 if (div.nextElementSibling) {
@@ -56,4 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
 });
