@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.appendChild(btnText);
     document.body.appendChild(btn);
     let divId = 1;
-    const colorArray = ["red", "orange", "yellow", "green", "blue", "purple"];
 
     let squareContainer = document.createElement("div");
     squareContainer.className = "container";
@@ -29,9 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         div.addEventListener("click", function () {
-            const randomNum = Math.floor((Math.random() * colorArray.length));
-            div.style.backgroundColor = colorArray[randomNum];
-        });
+            div.style.backgroundColor = getRandomColor();
+        })
+
+        function getRandomColor() {
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
         div.addEventListener("dblclick", function () {
             if (divId % 2 == 0) {
