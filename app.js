@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (div.nextElementSibling) {
                     div.nextElementSibling.remove();
                 } else {
-                    window.alert("No square after the clicked square!");
+                    alert("No element to remove!");
                 }
-            } else if (divId % 2 == 1) {
+            } else {
                 if (div.previousElementSibling) {
                     div.previousElementSibling.remove();
                 } else {
-                    window.alert("No square before the clicked square!");
+                    alert("No element to remove!");
                 }
             }
         });
